@@ -1,0 +1,36 @@
+.notFound {
+  text-align: center;
+}
+
+.notFound h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+.notFound p {
+  color: var(--text-clear);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-block: 15px 30px;
+  max-width: 490px;
+  margin-inline: auto;
+}
+
+.goHomeBtn {
+  padding-inline: 30px;
+}
+
+@media screen and (max-width: 575px) {
+  .notFound img {
+    width: 240px;
+    height: 100px;
+  }
+
+  .notFound h2 {
+    font-size: 1.7rem;
+  }
+
+  .notFound p {
+    font-size: 0.95rem;
+  }
+}

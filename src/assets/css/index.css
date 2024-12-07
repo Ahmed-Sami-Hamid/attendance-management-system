@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: var(--text-primary) transparent; /* Only Firefox */
+  font-family: "Barlow", sans-serif;
+}
+
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --green: #31b256;
+  --blue: #0074bd;
+  --red: #ec1b2e;
+
+  /* Texts */
+  --text-primary: #121214;
+  --text-secondary: #252c58;
+  --text-active: #0074bd;
+  --text-grey: #8f93ac;
+  --text-green: #31b256;
+  --text-red: #aa0000;
+  --text-yellow: #d5b500;
+
+  /* Border */
+  --border-grey: #808080;
+  --border-card: #e6e6e6ed;
+
+  /* Background */
+  --main-bg: #f1f2f6;
+  --card-bg: #ffffff;
+
+  /* Status */
+  --yello-status: #fff8e7;
+  --red-status: #ffe5ee;
+  --blue-status: #e6effc;
+  --green-status: #f7ffe9;
+
+  /* Padding */
+  --inline-layout-padding-lg: 32px;
+  --inline-layout-padding-md: 22px;
+  --inline-layout-padding-sm: 12px;
+  --block-layout-padding-lg: 20px;
+
+  /* Transition */
+  --transition: all 0.35s ease;
+  --appearScale: animationAppear 0.5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-size: var(--font-size-base);
+  font-family: "Barlow", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-clip: content-box;
+  background-color: rgba(0, 0, 0, 0);
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--bold-md); /* Semibold */
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--bold-md); /* Semibold */
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--bold-md); /* Semibold */
+}
+
+h4 {
+  font-size: var(--font-size-md);
+  font-family: "Unbounded", sans-serif;
+  font-weight: var(--bold-md); /* Semibold */
+}
+
+p {
+  font-size: var(--font-size-base);
+  font-weight: var(--bold-md);
+}
+
+input::placeholder {
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  font-family: "Barlow", sans-serif;
+}
+
+/* Fluid font size variables, for browsers that support clamp (min, preferred, max) */
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-sm: clamp(0.82rem, 0.1vw + 0.68rem, 0.8rem);
+    --font-size-base: clamp(0.875rem, calc(0.875rem + 0.5vw), 1rem);
+    --font-size-md: clamp(1rem, calc(1rem + 0.5vw), 1.125rem); /* H4 - 18px */
+    --font-size-lg: clamp(
+      1.125rem,
+      calc(1.125rem + 0.5vw),
+      1.25rem
+    ); /* H3 - 20px */
+    --font-size-xl: clamp(
+      1.25rem,
+      calc(1.25rem + 0.5vw),
+      1.375rem
+    ); /* H2 - 22px */
+    --font-size-xxl: clamp(
+      1.5rem,
+      calc(1.5rem + 0.5vw),
+      1.75rem
+    ); /* H1 - 24px */
+    --font-size-xxxl: clamp(2.67rem, 1.8vw + 2.31rem, 4.47rem);
+  }
+}
+
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-sm: 0.82rem;
+    --font-size-base: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-xxl: 1.5rem;
+    --font-size-xxxl: 2.67rem;
+  }
+  @media screen and (min-width: 1920px) {
+    :root {
+      --font-size-sm: 0.82rem;
+      --font-size-base: 1rem;
+      --font-size-md: 1.125rem;
+      --font-size-lg: 1.25rem;
+      --font-size-xl: 1.375rem;
+      --font-size-xxl: 1.75rem;
+      --font-size-xxxl: 2.67rem;
+    }
+  }
+}
+
+@keyframes animationAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

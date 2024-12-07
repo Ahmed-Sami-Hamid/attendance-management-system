@@ -1,0 +1,29 @@
+.navBarWrapper,
+.navBarWrapperOpen {
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-alt);
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.navBarWrapper {
+  width: calc(100% - 270px);
+  right: 0;
+}
+
+.navBarWrapperOpen {
+  width: 100dvw;
+  left: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .navBarWrapper,
+  .navBarWrapperOpen {
+    width: 100%;
+  }
+}
