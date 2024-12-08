@@ -5,7 +5,7 @@ type WindowSize = {
   height: number | undefined;
 };
 
-const useWindowSize = (): WindowSize => {
+export const useWindowSize = (): WindowSize => {
   const [windowSize, setWindowSize] = useState<WindowSize>({
     width: undefined,
     height: undefined,
@@ -27,5 +27,3 @@ const useWindowSize = (): WindowSize => {
 
   return windowSize;
 };
-
-export default useWindowSize;

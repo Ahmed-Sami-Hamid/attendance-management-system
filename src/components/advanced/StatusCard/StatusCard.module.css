@@ -1,8 +1,18 @@
 .wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 15px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.35s ease-in-out;
+  min-width: 280px;
+}
+
+.wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .circleContainer {
@@ -41,7 +51,7 @@
 }
 
 .mainTitle {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   margin-bottom: 5px;
   color: var(--text-secondary);
@@ -77,5 +87,6 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    justify-content: center;
   }
 }

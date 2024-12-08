@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 // Components
-import { MainCard } from "../MainCard";
 import { Button } from "../../ui";
 import { AttendanceModal } from "../../../components";
 
@@ -67,19 +66,19 @@ export const AttendanceActions = () => {
     }
   };
   return (
-    <MainCard>
-      <div className={Style.wrapper}>
-        <div className={Style.timeWrapper}>
-          <p className={Style.timeIcon}>{isMorning ? `☀️` : "🌙"}</p>
-          <div className={Style.timeTextWrapper}>
-            <p className={Style.timeText}>{currentTime}</p>
-            <p className={Style.timeInfo}>Realtime Insight</p>
-          </div>
+    <div className={Style.wrapper}>
+      <div className={Style.timeWrapper}>
+        <p className={Style.timeIcon}>{isMorning ? `☀️` : "🌙"}</p>
+        <div className={Style.timeTextWrapper}>
+          <p className={Style.timeText}>{currentTime}</p>
+          <p className={Style.timeInfo}>Realtime Insight</p>
         </div>
-        <div className={Style.dateWrapper}>
-          <p>Today:</p>
-          <p>{currentDate}</p>
-        </div>
+      </div>
+      <div className={Style.dateWrapper}>
+        <p>Today:</p>
+        <p>{currentDate}</p>
+      </div>
+      <div className={Style.buttonWrapper}>
         <Button
           onClick={() => {
             openModalClaim();
@@ -88,6 +87,6 @@ export const AttendanceActions = () => {
           + Attendance
         </Button>
       </div>
-    </MainCard>
+    </div>
   );
 };

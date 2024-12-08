@@ -7,8 +7,13 @@
 .cardsWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 40px;
+  gap: 20px;
+}
+
+.chartsWrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
 }
 
 @media screen and (max-width: 1111px) {
@@ -21,7 +26,7 @@
   }
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 975px) {
   .cardsWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -30,8 +35,15 @@
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 660px) {
   .cardsWrapper {
     justify-content: center;
+  }
+
+  .chartsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
