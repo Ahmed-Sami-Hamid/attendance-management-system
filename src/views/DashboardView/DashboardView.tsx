@@ -5,7 +5,6 @@ import {
   AttendanceActions,
   PageHeader,
   RequestLeaveModal,
-  AttendanceChart,
   Navbar,
 } from "../../components";
 

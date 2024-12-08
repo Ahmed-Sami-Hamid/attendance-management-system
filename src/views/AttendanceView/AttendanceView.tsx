@@ -92,7 +92,7 @@ const useAttendanceView = (): IAttendanceViewContext => {
     };
 
   const changeSelectedFromDate: AttendanceViewActions["changeSelectedFromDate"] =
-    (date) => {};
+    () => {};
 
   return Object.freeze<IAttendanceViewContext>({
     state: {

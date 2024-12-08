@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ModalHandle } from "../components/ui/MagicModal/MagicModal.type";
 export type OutletContextType = {
   generalModalRef: React.RefObject<ModalHandle>;
