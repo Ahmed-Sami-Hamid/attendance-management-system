@@ -7,6 +7,8 @@ import {
   RequestLeaveModal,
   Navbar,
   Sidebar,
+  AttendanceChart,
+  AttendancePieChart,
 } from "../../components";
 
 // Context
@@ -61,7 +63,9 @@ export const DashboardView = () => {
             </div>
           </div>
 
-          <div className={Style.chartsWrapper}>{/* <AttendanceChart /> */}</div>
+          <div className={Style.chartsWrapper}>
+            <AttendanceChart /> <AttendancePieChart />
+          </div>
         </div>
       </Container>
     </>
