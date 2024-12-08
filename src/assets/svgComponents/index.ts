@@ -7,3 +7,6 @@ export * from "./CalendarIcon";
 export * from "./SettingsIcon";
 export * from "./Notification";
 export * from "./Support";
+export * from "./Message";
+export * from "./History";
+export * from "./Arrows";

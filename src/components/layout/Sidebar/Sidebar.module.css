@@ -1,0 +1,67 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+}
+
+.container,
+.containerCollapsed {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 68px;
+  height: 283px;
+  padding: 10px 20px;
+  margin-block: 30px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  z-index: 1111;
+  top: 30%;
+  left: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.containerCollapsed {
+  left: -60px;
+}
+
+.toggleButton,
+.toggleButtonTwice {
+  position: absolute;
+  left: 87%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--border-grey);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButtonTwice {
+  transform: rotate(180deg);
+  background-color: var(--blue);
+}
+
+.activeLink {
+  position: relative;
+}
+
+.activeLink::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  width: 7px;
+  height: 39px;
+  border-radius: 0px 10px 10px 0;
+  background-color: var(--blue);
+}

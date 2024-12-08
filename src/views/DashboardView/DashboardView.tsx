@@ -6,6 +6,7 @@ import {
   PageHeader,
   RequestLeaveModal,
   Navbar,
+  Sidebar,
 } from "../../components";
 
 // Context
@@ -35,6 +36,7 @@ export const DashboardView = () => {
   return (
     <>
       <Navbar />
+      <Sidebar />
       <Container>
         <div className={Style.wrapper}>
           <PageHeader
