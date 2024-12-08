@@ -51,11 +51,9 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 body {
-  overflow: hidden;
   scroll-behavior: smooth;
   font-size: var(--font-size-base);
   font-family: "Lexend", sans-serif;

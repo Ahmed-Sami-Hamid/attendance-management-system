@@ -1,16 +1,11 @@
 .button {
-  background: linear-gradient(
-    113.86deg,
-    var(--green) 15.14%,
-    var(--sea-green) 51.59%,
-    var(--blue) 88.05%
-  );
+  background-color: var(--blue);
   border-radius: 8px;
-  color: var(--light);
+  color: var(--white);
   border: none;
   cursor: pointer;
-  font-weight: var(--bold-sm);
-  font-size: var(--font-size-md);
+  font-weight: 400;
+  font-size: 16px;
   text-transform: capitalize;
   white-space: nowrap;
   transition: 0.35s;
@@ -19,21 +14,6 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 24px;
-}
-
-.button:hover {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    linear-gradient(
-      114deg,
-      var(--green) 15.14%,
-      var(--sea-green) 51.59%,
-      var(--blue) 88.05%
-    );
 }
 
 .button:disabled {
@@ -45,7 +25,7 @@
   height: 20px;
   border-radius: 50%;
   border: 2px solid #ffffff50;
-  border-top-color: var(--primary-background);
+  border-top-color: var(--main-bg);
   animation: spin 1s linear infinite;
 }
 

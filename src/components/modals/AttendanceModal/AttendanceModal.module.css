@@ -1,0 +1,56 @@
+.wrapper {
+  width: 400px;
+}
+
+.mainTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.statusWrapper label {
+  width: 70px;
+}
+
+.inputStatus {
+  width: 100%;
+  padding: 7px;
+}
+
+.successMessage,
+.errorMessage {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.successMessage {
+  color: var(--text-green);
+}
+
+.errorMessage {
+  color: var(--text-red);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .formWrapper {
+    align-items: center;
+  }
+}

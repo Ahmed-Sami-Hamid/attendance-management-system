@@ -1,0 +1,24 @@
+.validationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.validationWrapper img {
+  flex-shrink: 0;
+}
+
+.validationWrapper h4 {
+  margin: 15px 0;
+}
+
+.subtitle {
+  color: var(--text-clear);
+  font-weight: var(--bold-xs);
+}
+
+.marginSpace {
+  margin-bottom: 22px;
+}

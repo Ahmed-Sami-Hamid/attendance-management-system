@@ -1,0 +1,84 @@
+.error {
+  text-align: center;
+}
+
+.icon {
+  min-height: 70px;
+  max-height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: var(--appearScale);
+  margin-bottom: 15px;
+}
+
+.error h5 {
+  font-size: var(--font-size-lg);
+  margin-inline: auto;
+  max-width: 330px;
+  margin-bottom: 20px;
+}
+
+.error p {
+  text-align: center;
+  padding-inline: 10px;
+  max-width: 420px;
+  color: var(--text-gre);
+  margin-block: -10px 20px;
+  margin: auto;
+}
+
+.dataInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin-inline: auto;
+  margin-top: 40px;
+}
+.debugMode {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  margin-bottom: 3px;
+  background-color: rgba(0, 0, 0, 0.123);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.close {
+  width: 159px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.message {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.showHtml {
+  max-height: 250px;
+  max-width: 100%;
+  overflow-y: scroll;
+  overflow: overlay;
+}
+
+.show {
+  color: red;
+  margin-block: 5px 16px;
+}
+
+.show:hover {
+  cursor: pointer;
+}
+
+.error .button {
+  margin-block: 20px 10px;
+}

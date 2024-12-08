@@ -1,0 +1,51 @@
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  background: rgba(30, 30, 30, 0.89);
+  backdrop-filter: blur(8.800000190734863px);
+}
+
+.modalWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: calc(100% - 20px);
+  max-height: calc(100vh - 100px);
+}
+
+.modal {
+  border-radius: 8px;
+  background-color: white;
+  padding: 32px 34px 30px 32px;
+  min-width: 324px;
+  width: fit-content;
+}
+
+.content {
+  padding: 10px 15px 15px;
+}
+
+.hideModal {
+  text-align: right;
+}
+
+.hideButton:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 18px 20px 16px 18px;
+    min-width: 80dvw;
+    margin: 0px 32px 0px 8px; /* not even becuase margin from the sidebar */
+    width: fit-content;
+  }
+}

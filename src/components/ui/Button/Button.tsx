@@ -16,7 +16,7 @@ export const Button = ({
   isLoading = false,
   children,
   className,
-  size = "large",
+  size = "medium",
 }: ButtonProps) => {
   const paddingStyles = {
     custom: { padding: "" },
@@ -53,7 +53,8 @@ export const Button = ({
   };
 
   return (
-    <div
+    <button
+      type="submit"
       style={style}
       onClick={handleClick}
       className={classNames(Style.button, className as string)}
@@ -63,6 +64,6 @@ export const Button = ({
       ) : (
         <div style={{ height: "20px" }}>{children}</div>
       )}
-    </div>
+    </button>
   );
 };
