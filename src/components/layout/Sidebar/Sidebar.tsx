@@ -20,7 +20,7 @@ export const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false); // Toggle state for sidebar
 
   const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
+    setIsCollapsed((prev) => !prev);
   };
 
   const location = useLocation(); // Get the current route
@@ -28,17 +28,15 @@ export const Sidebar = () => {
   const { width } = useWindowSize(); // Get window size
   const isMobile = width && width <= 768; // Check if the window width is less than or equal to 768px
 
+  const sidebarClass = `${Style.container} ${
+    isCollapsed || (isMobile && isCollapsed)
+      ? Style.containerCollapsed
+      : Style.container
+  }`;
+
   return (
     <div className={Style.wrapper}>
-      <div
-        className={
-          isCollapsed
-            ? Style.container
-            : isMobile
-            ? Style.containerCollapsed
-            : Style.container
-        }
-      >
+      <div className={sidebarClass}>
         <div
           className={isCollapsed ? Style.toggleButton : Style.toggleButtonTwice}
           onClick={toggleSidebar}
