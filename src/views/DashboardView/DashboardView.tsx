@@ -1,9 +1,17 @@
 // Components
-// import {StatusCard} from "../../components"
+import { StatusCard, Container } from "../../components";
 
 // Style
 import Style from "./DashboardView.module.css";
 
 export const DashboardView = () => {
-  return <div className={Style.wrapper}></div>;
+  return (
+    <>
+      <Container>
+        <div className={Style.wrapper}>
+          <StatusCard />
+        </div>
+      </Container>
+    </>
+  );
 };
