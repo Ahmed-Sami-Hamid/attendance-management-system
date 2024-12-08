@@ -1,23 +1,56 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Components
-// import { Avatar, MenuProfile } from "../../../components";
+import { Container } from "../../ui";
 
-// Styles
+// Hooks
+import { useWindowSize } from "../../../hooks";
+
+// Images
+import AvatarImg from "../../../assets/images/userIcon.png";
+
+// SVGs
+import { Logo, Support, Notification } from "../../../assets/svgComponents";
+
+// Style
 import Style from "./Navbar.module.css";
 
-// Types
-import { NavBarTypes } from "./Navbar.types";
-
-export const Navbar: React.FC<NavBarTypes> = ({ menuOpen }) => {
-  // Hooks
-  const [settings, setSettings] = useState<boolean>(false);
-
+export const Navbar = () => {
+  const { width } = useWindowSize();
+  const isMobile = width && width >= 410;
   return (
-    <div className={menuOpen ? Style.navBarWrapperOpen : Style.navBarWrapper}>
-      <div></div>
-      {/* <Avatar settings={settings} setSettings={setSettings} />
-      <MenuProfile settings={settings} setSettings={setSettings} /> */}
+    <div className={Style.wrapper}>
+      <Container>
+        <div className={Style.container}>
+          <Link to={"/"} className={Style.brandWrapper}>
+            <Logo />
+          </Link>
+          <div className={Style.avatarWrapper}>
+            <div className={Style.support}>
+              <Support />
+            </div>
+            <div className={Style.notification}>
+              <Notification />
+            </div>
+            <div className={Style.avatar}>
+              <img
+                src={AvatarImg}
+                alt="User Avatar"
+                className={Style.userImag}
+              />
+              {isMobile && (
+                <div>
+                  <p className={Style.avatarUserName}>Ahmed Sami</p>
+                  <p className={Style.avatarUserName}>
+                    <strong>ID: </strong>
+                    8430001
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </Container>
     </div>
   );
 };

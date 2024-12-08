@@ -3,3 +3,7 @@ export * from "./AttendanceIcon";
 export * from "./HomeIcon";
 export * from "./MenuLine";
 export * from "./TitleIcon";
+export * from "./CalendarIcon";
+export * from "./SettingsIcon";
+export * from "./Notification";
+export * from "./Support";

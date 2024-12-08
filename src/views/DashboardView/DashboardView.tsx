@@ -6,6 +6,7 @@ import {
   PageHeader,
   RequestLeaveModal,
   AttendanceChart,
+  Navbar,
 } from "../../components";
 
 // Context
@@ -33,34 +34,35 @@ export const DashboardView = () => {
     }
   };
   return (
-    <Container>
-      <div className={Style.wrapper}>
-        <PageHeader
-          title="Dashboard"
-          buttonTitle="Request for leave"
-          onClick={() => {
-            openModalClaim();
-          }}
-        />
-        <div className={Style.attendanceWrapper}>
-          <AttendanceActions />
-          <div className={Style.cardsWrapper}>
-            {leavesData.map((item, index) => (
-              <div key={index}>
-                <StatusCard
-                  title={item.title}
-                  total={item.total}
-                  used={item.used}
-                />
-              </div>
-            ))}
+    <>
+      <Navbar />
+      <Container>
+        <div className={Style.wrapper}>
+          <PageHeader
+            title="Dashboard"
+            buttonTitle="Request for leave"
+            onClick={() => {
+              openModalClaim();
+            }}
+          />
+          <div className={Style.attendanceWrapper}>
+            <AttendanceActions />
+            <div className={Style.cardsWrapper}>
+              {leavesData.map((item, index) => (
+                <div key={index}>
+                  <StatusCard
+                    title={item.title}
+                    total={item.total}
+                    used={item.used}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className={Style.chartsWrapper}>
-          <AttendanceChart />
+          <div className={Style.chartsWrapper}>{/* <AttendanceChart /> */}</div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };

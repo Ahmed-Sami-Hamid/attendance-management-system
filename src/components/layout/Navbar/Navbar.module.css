@@ -1,29 +1,109 @@
-.navBarWrapper,
-.navBarWrapperOpen {
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   position: fixed;
+  z-index: 1111;
   top: 0;
-  padding: 20px;
-  border-bottom: 1px solid var(--border-alt);
-  background: var(--light);
+}
+
+.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  width: 800px;
+  padding: 10px 20px;
+  margin-block: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.navBarWrapper {
-  width: calc(100% - 270px);
-  right: 0;
+.avatarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.navBarWrapperOpen {
-  width: 100dvw;
-  left: 0;
+.support,
+.notification {
+  background-color: var(--blue-status);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 1199px) {
-  .navBarWrapper,
-  .navBarWrapperOpen {
+.notification {
+  position: relative;
+}
+
+.notification::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: 51%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userImag {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.avatarUserName {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 985px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    position: fixed;
+    z-index: 1111;
+    top: -30px;
+  }
+
+  .container {
+    width: 100dvw;
+    border-radius: unset;
+  }
+  .avatarWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }

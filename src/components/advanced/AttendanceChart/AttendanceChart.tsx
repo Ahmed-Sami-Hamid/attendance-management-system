@@ -9,6 +9,9 @@ import {
   Legend,
 } from "chart.js";
 
+// Styles
+import Style from "./AttendanceChart.module.css";
+
 // Register required components
 ChartJS.register(
   CategoryScale,
@@ -20,15 +23,23 @@ ChartJS.register(
 );
 
 export const AttendanceChart: React.FC = () => {
-  // Sample Data
+  // Attendance Data for One Employee
   const data = {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Present", "Absent", "Leave"], // Categories
     datasets: [
       {
-        label: "Sales",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: "rgba(75, 192, 192, 0.6)", // Bar color
-        borderColor: "rgba(75, 192, 192, 1)", // Border color
+        label: "Days",
+        data: [20, 5, 5], // Number of days for each category
+        backgroundColor: [
+          "rgba(75, 192, 192, 0.6)", // Present: Green
+          "rgba(255, 99, 132, 0.6)", // Absent: Red
+          "rgba(255, 206, 86, 0.6)", // Leave: Yellow
+        ],
+        borderColor: [
+          "rgba(75, 192, 192, 1)",
+          "rgba(255, 99, 132, 1)",
+          "rgba(255, 206, 86, 1)",
+        ],
         borderWidth: 1,
       },
     ],
@@ -39,24 +50,32 @@ export const AttendanceChart: React.FC = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const, // Legend position
+        display: false, // Hide legend as it's self-explanatory
       },
       title: {
         display: true,
-        text: "Monthly Sales Data", // Chart title
+        text: "Attendance Breakdown for Employee: Ahmed Sami",
       },
     },
     scales: {
       x: {
         grid: {
-          display: false, // Disable gridlines on X-axis
+          display: false,
         },
       },
       y: {
-        beginAtZero: true, // Start Y-axis at 0
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: "Number of Days",
+        },
       },
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return (
+    <div className={Style.wrapper}>
+      <Bar data={data} options={options} />
+    </div>
+  );
 };
