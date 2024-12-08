@@ -26,7 +26,8 @@ export const StatusCard: React.FC<StatusCardProps> = ({
             }}
           >
             <div className={Style.circleText}>
-              0{used}/0{total}
+              <span>0{used}</span>
+              <strong>/</strong>0{total}
             </div>
           </div>
         </div>
@@ -35,13 +36,13 @@ export const StatusCard: React.FC<StatusCardProps> = ({
         <div>
           <p className={Style.mainTitle}>{title}</p>
           <p className={Style.text}>
-            <div className={Style.dotTotal} /> Total: 0{total}
+            <div className={Style.dotTotal} /> Total - {total}
           </p>
           <p className={Style.text}>
-            <div className={Style.dotUsed} /> Used: 0{used}
+            <div className={Style.dotUsed} /> Used - {used}
           </p>
           <p className={Style.text}>
-            <div className={Style.dotRem} /> Remaining: 0{remaining}
+            <div className={Style.dotRem} /> Remaining - {remaining}
           </p>
         </div>
       </div>
