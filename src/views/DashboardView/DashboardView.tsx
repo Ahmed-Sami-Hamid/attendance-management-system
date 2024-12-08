@@ -9,7 +9,12 @@ export const DashboardView = () => {
     <>
       <Container>
         <div className={Style.wrapper}>
-          <StatusCard />
+          <div className={Style.cardsWrapper}>
+            <StatusCard title={"Sick Leave"} total={7} used={4} />
+            <StatusCard title={"Sick Leave"} total={7} used={4} />
+            <StatusCard title={"Sick Leave"} total={7} used={4} />
+            <StatusCard title={"Sick Leave"} total={7} used={4} />
+          </div>
         </div>
       </Container>
     </>

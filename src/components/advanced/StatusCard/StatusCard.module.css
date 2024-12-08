@@ -1,4 +1,77 @@
 .wrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 15px;
+}
+
+.circleContainer {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.circleProgress {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: conic-gradient(#e0e0e0 0%, #e0e0e0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleText {
+  position: absolute;
+  font-weight: light;
+  color: var(--blue);
+  background-color: var(--white);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainTitle {
+  font-size: 18px;
+  font-weight: light;
+  margin-bottom: 5px;
+  color: var(--text-secondary);
+}
+
+.text {
+  font-size: 12px;
+  color: var(--text-grey);
+  font-weight: light;
+}
+
+.dotTotal,
+.dotUsed,
+.dotRem {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.dotTotal {
+  background-color: var(--text-primary);
+}
+
+.dotRem {
+  background-color: var(--text-grey);
+}
+
+@media screen and (max-width: 310px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 }
