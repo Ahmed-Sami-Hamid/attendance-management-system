@@ -5,27 +5,13 @@ import { Button } from "../../ui";
 import { useAttendanceViewContext } from "../../../contexts/AttendanceViewContext";
 
 // Data
-import { AttendanceStatusEnum } from "../../../data/mockData";
+import { AttendanceStatus, AttendanceStatusEnum } from "../../../data/mockData";
 
 // SVGs
 import { CalendarIcon } from "../../../assets/svgComponents";
 
 // Style
 import Style from "./TableCardHeader.module.css";
-
-export const TableCardHeader: React.FC = () => {
-  return (
-    <div className={Style.tableHeaderWarpper}>
-      <div className={Style.titleContainer}>
-        <h1 className={Style.title}>Attendance Overview</h1>
-      </div>
-      <div className={Style.filterWrapper}>
-        <TableCardAttendanceHeaderFilter />
-        <TableCardAttendanceCalendarBtns />
-      </div>
-    </div>
-  );
-};
 
 const TableCardAttendanceHeaderFilter: React.FC = () => {
   const { state, actions } = useAttendanceViewContext();
@@ -63,6 +49,20 @@ const TableCardAttendanceCalendarBtns: React.FC = () => {
         <CalendarIcon />
         <span>29 July 2023</span>
       </Button>
+    </div>
+  );
+};
+
+export const TableCardHeader: React.FC = () => {
+  return (
+    <div className={Style.tableHeaderWarpper}>
+      <div className={Style.titleContainer}>
+        <h1 className={Style.title}>Attendance Overview</h1>
+      </div>
+      <div className={Style.filterWrapper}>
+        <TableCardAttendanceHeaderFilter />
+        <TableCardAttendanceCalendarBtns />
+      </div>
     </div>
   );
 };

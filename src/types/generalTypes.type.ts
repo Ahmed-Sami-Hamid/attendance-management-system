@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ModalHandle } from "../components/ui/MagicModal/MagicModal.type";
-import {
-  AttendanceStatus,
-  AttendanceStatusEnum,
-  mockAttendenceOverview,
-} from "../data";
+import { AttendanceStatus, mockAttendenceOverview } from "../data";
 
 export type OutletContextType = {
   generalModalRef: React.RefObject<ModalHandle>;
