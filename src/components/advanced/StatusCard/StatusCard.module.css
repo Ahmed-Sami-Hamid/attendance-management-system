@@ -35,7 +35,7 @@
 
 .circleText {
   position: absolute;
-  font-weight: lighter;
+  font-weight: 400;
   color: var(--blue);
   background-color: var(--white);
   width: 60px;

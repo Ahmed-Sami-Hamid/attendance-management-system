@@ -24,9 +24,7 @@ export const StatusCard: React.FC<StatusCardProps> = ({
           }}
         >
           <div className={Style.circleText}>
-            <span>{used}</span>
-            <strong>/</strong>
-            {total}
+            <span>{used}</span>/{total}
           </div>
         </div>
       </div>
