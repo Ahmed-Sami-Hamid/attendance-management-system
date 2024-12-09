@@ -66,20 +66,14 @@ export const Sidebar = () => {
           </Link>
         </div>
 
-        <div
-          className={
-            location.pathname === "/leave-requests"
-              ? Style.activeLink
-              : Style.link
-          }
-        >
-          <Link to="/leave-requests">
+        <div className={Style.link}>
+          <div style={{ cursor: "not-allowed" }}>
             <Message
               stroke={
                 location.pathname === "/leave-requests" ? "#0074bd" : "#A3AED0"
               }
             />
-          </Link>
+          </div>
         </div>
       </div>
     </div>

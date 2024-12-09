@@ -3,3 +3,4 @@ export * from "./Container";
 export * from "./MagicModal";
 export * from "./PageHeader";
 export * from "./Divider";
+export * from "./Loader";

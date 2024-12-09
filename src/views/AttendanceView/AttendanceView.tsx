@@ -7,7 +7,7 @@ import {
   PageHeader,
   AttendanceTable,
   TableCardHeader,
-  Divider,
+  LoaderWrapper,
 } from "../../components";
 
 // Style
@@ -15,16 +15,17 @@ import Style from "./AttendanceView.module.css";
 
 export const AttendanceView: React.FC = () => {
   return (
-    <AttendanceViewProvider>
-      <Container>
-        <PageHeader title="Attendance History" />
-        <TableCard>
-          <TableCardHeader />
-          <Divider marginInline={"0"} />
-          <AttendanceTable />
-        </TableCard>
-      </Container>
-    </AttendanceViewProvider>
+    <LoaderWrapper>
+      <AttendanceViewProvider>
+        <Container>
+          <PageHeader title="Attendance History" />
+          <TableCard>
+            <TableCardHeader />
+            <AttendanceTable />
+          </TableCard>
+        </Container>
+      </AttendanceViewProvider>
+    </LoaderWrapper>
   );
 };
 

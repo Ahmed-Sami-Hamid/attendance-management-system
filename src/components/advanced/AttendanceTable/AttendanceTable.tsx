@@ -1,5 +1,10 @@
+// Context
 import { useAttendanceViewContext } from "../../../contexts/AttendanceViewContext";
+
+// Data
 import { AttendanceStatus, mockAttendenceOverview } from "../../../data";
+
+// Style
 import Style from "./AttendanceTable.module.css";
 
 export const AttendanceTable = () => {

@@ -1,8 +1,9 @@
 .wrapper {
   width: 100%;
-  max-height: 28.5625rem;
-  overflow-y: scroll;
-  padding-inline: 1.5rem;
+  max-height: 457px;
+  overflow-x: hidden;
+  min-width: 1000px;
+  padding-inline: 24px;
 }
 
 .table {
@@ -24,27 +25,27 @@
 }
 
 .header {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: var(--table-header-color, #9395ac);
-  font-size: var(--font-size-base, 00.875rem);
+  font-size: 14px;
   font-weight: 500;
   font-family: var(--family-lexend, "Lexend");
-  line-height: 1.125rem;
+  line-height: 18px;
   text-align: start;
 }
 
 .table tbody tr td {
-  height: 4.25rem;
+  height: 68px;
   border-bottom: 1px solid #d5d9dd;
 }
 
 .cellText {
   color: var(--table-header-color, #9395ac);
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
   font-family: var(--family-lexend, "Lexend");
-  line-height: 1.125rem;
+  line-height: 18px;
   text-align: start;
 }
 
@@ -66,10 +67,10 @@
 
 .statusChip {
   display: inline-block;
-  padding-inline: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 0.375rem;
+  padding-inline: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 6px;
 }
 
 .statusChip[data-status="primary"] {

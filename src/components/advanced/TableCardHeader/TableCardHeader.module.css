@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  margin-bottom: 30px;
 }
 
 .tableCard {
@@ -13,6 +14,7 @@
   max-height: 593px;
   border-radius: 15px;
   background-color: var(--white);
+  margin-bottom: 30px;
 }
 
 .tableHeaderWarpper {
@@ -24,6 +26,9 @@
   padding-inline-start: 34px;
   padding-inline-end: 16px;
   padding-bottom: 24px;
+  overflow: hidden;
+  min-width: 1000px;
+  border-bottom: 1px solid var(--black);
 }
 
 .tableHeaderWarpper .titleContainer {
