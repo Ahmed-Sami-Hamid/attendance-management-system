@@ -54,3 +54,5 @@ Before you begin, ensure you have the following installed:
    ```
 
 ### Demo Link
+
+https://attendance-management-system-opal.vercel.app/
