@@ -6,7 +6,7 @@ export type StatusDataType = {
 
 export const statusData: StatusDataType[] = [
   {
-    icon: "😁",
+    icon: "✅",
     status: "Approved",
     number: 15,
   },

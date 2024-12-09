@@ -9,29 +9,29 @@ export const LeavesStatus: React.FC<StatusDataType> = ({
   status,
   number,
 }) => {
-  // Helper function to determine color
   const getColor = (status: string): string => {
     switch (status) {
       case "Pending":
-        return "#fff8e7";
+        return "#d5b500";
       case "Approved":
-        return "#f7ffe9";
+        return "#31b256";
       case "Rejected":
-        return "#ffe5ee";
+        return "#aa0000";
       default:
-        return "#f5f5f5"; // Fallback color
+        return "#f5f5f5";
     }
   };
 
   return (
-    <div
-      className={Style.wrapper}
-      style={{ backgroundColor: getColor(status) }}
-    >
+    <div className={Style.wrapper}>
       <div className={Style.iconWrapper}>{icon}</div>
       <div className={Style.cardWrapper}>
-        <h2 className={Style.statusNum}>{number}</h2>
-        <p className={Style.title}>{status} Leaves</p>
+        <h2 className={Style.statusNum} style={{ color: getColor(status) }}>
+          {number}
+        </h2>
+        <p className={Style.title} style={{ color: getColor(status) }}>
+          {status} Leaves
+        </p>
       </div>
     </div>
   );
