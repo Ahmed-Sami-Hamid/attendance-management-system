@@ -10,6 +10,14 @@
   gap: 20px;
 }
 
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-block: 40px;
+}
+
 .chartsWrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -28,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
@@ -47,10 +55,22 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .statusWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 660px) {
   .cardsWrapper {
     justify-content: center;
+  }
+
+  .statusWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }

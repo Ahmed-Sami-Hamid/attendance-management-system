@@ -8,6 +8,7 @@ import {
   AttendanceChart,
   AttendancePieChart,
   LoaderWrapper,
+  LeavesStatus,
 } from "../../components";
 
 // Context
@@ -17,7 +18,7 @@ import { useOutletContext } from "react-router-dom";
 import { OutletContextType } from "../../types";
 
 // Data
-import { leavesData } from "../../data";
+import { leavesData, statusData } from "../../data";
 
 // Style
 import Style from "./DashboardView.module.css";
@@ -58,6 +59,12 @@ export const DashboardView = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className={Style.statusWrapper}>
+            {statusData.map((data, index) => (
+              <LeavesStatus key={index} {...data} />
+            ))}
           </div>
 
           <div className={Style.chartsWrapper}>

@@ -6,17 +6,18 @@ export type StatusDataType = {
 
 export const statusData: StatusDataType[] = [
   {
-    icon: "https://via.placeholder.com/50?text=P",
-    status: "Pending",
-    number: 5,
-  },
-  {
-    icon: "https://via.placeholder.com/50?text=A",
+    icon: "😁",
     status: "Approved",
     number: 15,
   },
   {
-    icon: "https://via.placeholder.com/50?text=R",
+    icon: "⏳",
+    status: "Pending",
+    number: 5,
+  },
+
+  {
+    icon: "❌",
     status: "Rejected",
     number: 2,
   },

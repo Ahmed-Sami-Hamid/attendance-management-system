@@ -5,3 +5,4 @@ export * from "./AttendanceActions";
 export * from "./AttendanceChart";
 export * from "./AttendancePieChart";
 export * from "./TableCardHeader";
+export * from "./LeavesStatus";

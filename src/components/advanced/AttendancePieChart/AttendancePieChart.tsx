@@ -53,6 +53,7 @@ export const AttendancePieChart: React.FC = () => {
       <div className={Style.pieWrapper}>
         <Pie data={data} options={options} />
       </div>
+      <p>Total working days</p>
     </div>
   );
 };

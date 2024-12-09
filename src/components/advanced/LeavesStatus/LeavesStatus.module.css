@@ -7,3 +7,21 @@
   justify-content: space-between;
   gap: 20px;
 }
+
+.iconWrapper {
+  font-size: 50px;
+}
+
+.statusNum {
+  font-size: 70px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 330px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1px;
+  }
+}
