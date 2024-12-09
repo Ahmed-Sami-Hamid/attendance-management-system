@@ -1,4 +1,4 @@
-import { useAttendanceViewContext } from "../../../views";
+import { useAttendanceViewContext } from "../../../contexts/AttendanceViewContext";
 import { AttendanceStatus, mockAttendenceOverview } from "../../../data";
 import Style from "./AttendanceTable.module.css";
 

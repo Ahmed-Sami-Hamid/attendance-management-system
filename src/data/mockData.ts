@@ -1,4 +1,5 @@
 export type AttendanceStatus = "PRESENT" | "LEAVE" | "EARLYOUT";
+
 export enum AttendanceStatusEnum {
   ALL = "ALL",
   PRESENT = "PRESENT",

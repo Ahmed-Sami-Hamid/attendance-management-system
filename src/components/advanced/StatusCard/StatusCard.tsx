@@ -35,13 +35,13 @@ export const StatusCard: React.FC<StatusCardProps> = ({
       <div>
         <p className={Style.mainTitle}>{title}</p>
         <p className={Style.text}>
-          <div className={Style.dotTotal} /> Total - {total}
+          <span className={Style.dotTotal} /> Total - {total}
         </p>
         <p className={Style.text}>
-          <div className={Style.dotUsed} /> Used - {used}
+          <span className={Style.dotUsed} /> Used - {used}
         </p>
         <p className={Style.text}>
-          <div className={Style.dotRem} /> Remaining - {remaining}
+          <span className={Style.dotRem} /> Remaining - {remaining}
         </p>
       </div>
     </div>

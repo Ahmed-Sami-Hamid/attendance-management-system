@@ -4,3 +4,4 @@ export * from "./StatusCard";
 export * from "./AttendanceActions";
 export * from "./AttendanceChart";
 export * from "./AttendancePieChart";
+export * from "./TableCardHeader";

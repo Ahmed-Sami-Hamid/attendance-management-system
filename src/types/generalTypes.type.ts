@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ModalHandle } from "../components/ui/MagicModal/MagicModal.type";
+import {
+  AttendanceStatus,
+  AttendanceStatusEnum,
+  mockAttendenceOverview,
+} from "../data";
+
 export type OutletContextType = {
   generalModalRef: React.RefObject<ModalHandle>;
   generalErrorsResolver: (a: any) => void;
@@ -29,3 +35,21 @@ export type TxnData = {
   lockupPeriod?: string | null;
   details?: HistoryModalDetails;
 };
+
+export type AttendanceViewState = {
+  stateEnum: "idel" | "busy" | "success" | "error";
+  attendanceHistory: typeof mockAttendenceOverview;
+  selectedAttendanceStatus: AttendanceStatus | "ALL";
+  selectedDate: Date | null;
+};
+
+export type AttendanceViewActions = {
+  changeSelectedAttendanceStatus: (status: AttendanceStatus) => void;
+  changeSelectedDate: (date: Date) => void;
+  changeSelectedFromDate: (date: Date) => void;
+};
+
+export interface IAttendanceViewContext {
+  state: AttendanceViewState;
+  actions: AttendanceViewActions;
+}
