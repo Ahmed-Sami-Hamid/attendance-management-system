@@ -3,9 +3,21 @@
   border-radius: 16px;
   padding: 30px;
   transition: all 0.35s ease-in-out;
+  width: 100%;
 }
 
 .wrapper:hover {
   transform: translateY(-5px);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media screen and (max-width: 460px) {
+  .wrapper {
+    overflow: scroll;
+  }
+
+  .pieWrapper {
+    min-width: 280px;
+    overflow: hidden;
+  }
 }

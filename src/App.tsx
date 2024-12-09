@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { DashboardView } from "./views";
 import { AttendanceView } from "./views";
 import { NotFoundView } from "./views";
-import { MagicModal } from "./components";
+import { MagicModal, Navbar, Sidebar } from "./components";
 
 // Types
 import { ModalHandle } from "./components/ui/MagicModal/MagicModal.type";
@@ -18,7 +18,8 @@ const Layout = ({
 }) => {
   return (
     <>
-      {/* Shared Context for Modal */}
+      <Sidebar />
+      <Navbar />
       <Outlet context={{ generalModalRef }} />
     </>
   );

@@ -1,13 +1,26 @@
 import { createContext, useContext, useState } from "react";
 
+// Components
+import {
+  AttendanceTable,
+  Button,
+  Container,
+  PageHeader,
+} from "./../../components";
+
+// Data
 import {
   AttendanceStatus,
   AttendanceStatusEnum,
   mockAttendenceOverview,
 } from "../../data";
-import { CalendarIcon, SettingsIcon } from "../../assets/svgComponents";
-import { AttendanceTable, Button, Container } from "./../../components";
 
+// Types
+
+// SVGs
+import { CalendarIcon } from "../../assets/svgComponents";
+
+// Styles
 import Style from "./AttendanceView.module.css";
 
 type AttendanceViewState = {
@@ -125,20 +138,15 @@ export const AttendanceView = () => {
   return (
     <AttendanceViewProvider>
       <Container>
-        <Wrapper>
-          <TableCard>
-            <TableCardHeader />
-            <Divider marginInline={"2rem"} />
-            <AttendanceTable />
-          </TableCard>
-        </Wrapper>
+        <PageHeader title="Attendance History" />
+        <TableCard>
+          <TableCardHeader />
+          <Divider marginInline={"2rem"} />
+          <AttendanceTable />
+        </TableCard>
       </Container>
     </AttendanceViewProvider>
   );
-};
-
-const Wrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
-  return <div className={Style.wrapper}>{children}</div>;
 };
 
 const TableCard: React.FC<React.PropsWithChildren> = ({ children }) => {
@@ -203,10 +211,6 @@ const TableCardAttendanceCalendarBtns: React.FC = () => {
       <Button className={Style.calendarButton}>
         <CalendarIcon />
         <span>29 July 2023</span>
-      </Button>
-      <Button className={Style.attendenceButton} size="large">
-        <SettingsIcon />
-        <span>View Attendence</span>
       </Button>
     </div>
   );

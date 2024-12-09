@@ -42,26 +42,7 @@ export const leavesData: LeaveStatus[] = [
       pendingRequests: 0,
     },
   },
-  {
-    title: "Maternity Leave",
-    total: 90,
-    used: 60,
-    additionalInfo: {
-      totalDaysWorked: 150,
-      leaveBalance: 30,
-      pendingRequests: 0,
-    },
-  },
-  {
-    title: "Paternity Leave",
-    total: 15,
-    used: 10,
-    additionalInfo: {
-      totalDaysWorked: 150,
-      leaveBalance: 5,
-      pendingRequests: 1,
-    },
-  },
+
   {
     title: "Unpaid Leave",
     total: 30,

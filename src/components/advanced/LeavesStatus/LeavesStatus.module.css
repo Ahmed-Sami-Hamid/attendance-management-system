@@ -1,0 +1,9 @@
+.wrapper {
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}

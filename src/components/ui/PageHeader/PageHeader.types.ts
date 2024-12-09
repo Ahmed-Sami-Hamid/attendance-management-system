@@ -1,5 +1,5 @@
 export type PageHeaderProps = {
   title: string;
-  buttonTitle: string;
+  buttonTitle?: string;
   onClick?: () => void;
 };

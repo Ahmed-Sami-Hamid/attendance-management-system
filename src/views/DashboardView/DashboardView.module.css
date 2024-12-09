@@ -1,12 +1,12 @@
 .attendanceWrapper {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1.3fr 2fr;
   column-gap: 20px;
 }
 
 .cardsWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
@@ -18,12 +18,25 @@
 }
 
 @media screen and (max-width: 1111px) {
+  .chartsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .attendanceWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .chartsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
   }
 }
 
@@ -39,12 +52,5 @@
 @media screen and (max-width: 660px) {
   .cardsWrapper {
     justify-content: center;
-  }
-
-  .chartsWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 }

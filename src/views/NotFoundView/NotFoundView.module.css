@@ -1,5 +1,13 @@
-.notFound {
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.notFound {
+  max-width: 500px;
+  margin-block: 120px;
 }
 
 .notFound h2 {
@@ -18,6 +26,12 @@
 
 .goHomeBtn {
   padding-inline: 30px;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 575px) {

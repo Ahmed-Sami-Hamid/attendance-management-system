@@ -75,7 +75,9 @@ export const AttendanceChart: React.FC = () => {
 
   return (
     <div className={Style.wrapper}>
-      <Bar data={data} options={options} />
+      <div className={Style.barWrapper}>
+        <Bar data={data} options={options} />
+      </div>
     </div>
   );
 };

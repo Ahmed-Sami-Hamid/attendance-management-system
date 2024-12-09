@@ -5,8 +5,6 @@ import {
   AttendanceActions,
   PageHeader,
   RequestLeaveModal,
-  Navbar,
-  Sidebar,
   AttendanceChart,
   AttendancePieChart,
 } from "../../components";
@@ -37,8 +35,6 @@ export const DashboardView = () => {
   };
   return (
     <>
-      <Navbar />
-      <Sidebar />
       <Container>
         <div className={Style.wrapper}>
           <PageHeader

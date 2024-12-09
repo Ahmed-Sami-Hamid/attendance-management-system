@@ -10,10 +10,9 @@
 .tableCard {
   flex: 1;
   height: 100%;
-  max-height: 37.0625rem;
-  border-radius: 0.9375rem;
-  background-color: var(--bg-color, #ffffff);
-  border: 1px solid red;
+  max-height: 593px;
+  border-radius: 15px;
+  background-color: var(--white);
 }
 
 .tableHeaderWarpper {
@@ -21,10 +20,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-top: 1.75rem;
-  padding-inline-start: 2.125rem;
-  padding-inline-end: 1rem;
-  padding-bottom: 1.5rem;
+  padding-top: 28px;
+  padding-inline-start: 34px;
+  padding-inline-end: 16px;
+  padding-bottom: 24px;
 }
 
 .tableHeaderWarpper .titleContainer {
@@ -34,24 +33,24 @@
 
 .tableHeaderWarpper .title {
   font-weight: 300;
-  font-size: var(--font-size-xl, 1.25rem);
+  font-size: var(--font-size-xl, 20px);
   font-family: var(--family-lexend, "Lexend");
 }
 
 .tableHeaderWarpper .filterWrapper {
   display: flex;
-  gap: 1.125rem;
+  gap: 18px;
 }
 
 .filterWrapper .filterListContainer {
   display: flex;
   align-self: center;
-  gap: 1.125rem;
+  gap: 18px;
 }
 
 .filterListContainer li {
   display: flex;
-  gap: 0.375rem;
+  gap: 6px;
   cursor: pointer;
 }
 
@@ -69,26 +68,26 @@
 
 .filterWrapper .filterButtonsContainer {
   display: flex;
-  gap: 1.125rem;
+  gap: 18px;
 }
 
 .filterButtonsContainer .calendarButton {
   background: rgba(192, 192, 192, 0.2);
   border: 1px solid rgba(213, 217, 221, 1);
-  border-radius: 0.625rem;
+  border-radius: 10px;
 }
 
 .calendarButton div {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: 14px;
 }
 
 .calendarButton div span {
-  font-size: var(--font-size-base, 0.875rem);
+  font-size: var(--font-size-base, 14px);
   font-weight: 300;
   font-family: var(--family-lexend, "Lexend");
-  line-height: 1.09375rem;
+  line-height: 17.5px;
   color: rgba(37, 44, 88, 1);
 }
 
@@ -99,13 +98,13 @@
 .attendenceButton div {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: 14px;
 }
 
 .attendenceButton div span {
-  font-size: var(--font-size-base, 0.875rem);
+  font-size: var(--font-size-base, 14px);
   font-weight: 300;
   font-family: var(--family-lexend, "Lexend");
-  line-height: 1.09375rem;
+  line-height: 17.5px;
   color: var(--white, #ffffff);
 }
