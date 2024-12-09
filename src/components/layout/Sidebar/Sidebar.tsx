@@ -17,7 +17,7 @@ import {
 import Style from "./Sidebar.module.css";
 
 export const Sidebar = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false); // Toggle state for sidebar
+  const [isCollapsed, setIsCollapsed] = useState(true); // Toggle state for sidebar
 
   const toggleSidebar = () => {
     setIsCollapsed((prev) => !prev);

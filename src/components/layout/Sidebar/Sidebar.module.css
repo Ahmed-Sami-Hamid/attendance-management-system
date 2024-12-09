@@ -30,7 +30,7 @@
 }
 
 .containerCollapsed {
-  left: -60px;
+  left: -55px;
 }
 
 .toggleButton,
@@ -39,16 +39,23 @@
   left: 87%;
   width: 20px;
   height: 20px;
-  background-color: var(--border-grey);
+  background-color: var(--blue);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
 }
 
 .toggleButtonTwice {
   transform: rotate(180deg);
-  background-color: var(--blue);
+  background-color: var(--border-grey);
+}
+
+.toggleButton:hover,
+.toggleButtonTwice:hover {
+  transform: scale(1.1);
 }
 
 .activeLink {
