@@ -23,7 +23,7 @@ export const LoaderWrapper: React.FC<LoaderProps> = ({ children }) => {
     window.scrollTo(0, 0);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
   }, []);
 
   return (
